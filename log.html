@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+    <link href="alma.css" rel="stylesheet">
+    <title>Almagest Project</title>
+  </head>
+  <body>
+    <audio id="hat" preload="auto">
+      <source src="assets/audio/x_hat.mp3" type="audio/mp3" />
+      <source src="assets/audio/x_hat.wav" type="audio/wav" />
+    </audio>
+    <header id="header">
+      <h1>Almagest</h1>
+      <div id="hatctrl">
+        <a onclick="down()">-</a>
+        <a id="onoff" onclick="onoff()">Play</a>
+        <a onclick="up()">+</a>
+        <span id="bpm"></span>
+      </div>
+    </header>
+    <main id="screens">
+      <div id="catchphrase">Feel the sound, be the music</div>
+      <div id="back"><a href="index.html">Back</a></div>
+      <article>
+        <h1>infdev3 : crashtest</h1>
+        <table>
+          <tr>
+            <td><a href="https://skiel.s-ul.eu/t0xUhkr2.png" target="_blank"><img class="side" src="https://skiel.s-ul.eu/t0xUhkr2.png" alt="screenshot" /></a></td>
+            <td style="padding:.5em">
+              <p>
+                Various objects have been implemented. <br />
+                The player can move but its movements aren't constrained to the desired behavior yet. <br  />
+                <em>Beat dependant</em> object are implemented. This mean, if we can create a level and attach it a song and BPM (<em>Beats Per Minute</em>), any <em>beat dependant</em> object will work <strong>in sync</strong> with the song. <br />
+                Cannons object are fully implemented. They are configurable and depends on the current songs BPM. <br />
+                Jumpers object have been partially implemented. They do make the player jump but they aren't very configurable yet. They are <em>beat dependant</em> and their timing are configurable.
+              </p>
+            </td>
+          </tr>
+        </table>
+      </article>
+      <footer>Copyright &copy; 2017 - <a href="https://twitter.com/Shookaite">Damien "SKiEL" Savatier</a></footer>
+    </main>
+    <script src="alma.js"></script>
+  </body>
+</html>

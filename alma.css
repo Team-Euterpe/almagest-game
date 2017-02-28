@@ -1,0 +1,130 @@
+
+@font-face {
+  font-family: 'Anonymous';
+  src:
+    url('fonts/anonymous_pro-webfont.woff2') format('woff2'),
+    url('fonts/anonymous_pro-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Quicksand';
+  src:
+    url('fonts/quicksand-regular-webfont.woff2') format('woff2'),
+    url('fonts/quicksand-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+html {
+  background-color: #3d3d3d;
+  color: #fff;
+}
+body {
+  margin:0;border:0;padding:0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+a, a:visited {
+  color: #ff4500;
+  text-decoration: none;
+}
+a:hover, a:active {
+  text-decoration: underline;
+}
+h1 {
+  font-family: 'Quicksand';
+}
+header h1 {
+  line-height: 160px;
+  margin: 0;
+  font-family: Anonymous, sans-serif;
+  font-size: 63px;
+}
+header {
+  height: 210px;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  transition: .1s ease-out;
+  box-shadow: 0 15px 10px #333;
+}
+header.active {
+  background-color: #000;
+  color: #fff;
+}
+#hatctrl {
+  display: inline-block;
+  line-height: 40px;
+}
+#hatctrl a {
+  color: inherit;
+  border: 2px solid #777;
+  padding: .5em 1em;
+  text-decoration: none;
+  cursor: pointer;
+}
+#hatctrl #bpm {
+  float: right;
+  margin-left: 2em;
+}
+#hat {
+  display: none;
+}
+main {
+  width: 90%;
+  margin: 1em auto;
+}
+#catchphrase {
+  padding: 1em 0;
+  font-size: 28px;
+  font-style: italic;
+}
+main article {
+  color: #000;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 10px 7px #333;
+  min-height: 100px;
+  margin: 1em 0;
+  padding: 1em;
+  text-align: center;
+}
+main#screens article {
+  text-align: left;
+}
+main#screens article h1 {
+  border-bottom: 2px solid rgba(102, 102, 102,.5);
+}
+main article img {
+  max-width: 100%;
+  margin: auto;
+  box-shadow: 0 0 5px 1px #333;
+}
+main article ul {
+  list-style: none;
+}
+main article#theteam div img {
+  max-width: 200px;
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 8px 2px #333;
+}
+footer {
+  color: white;
+  text-align: right;
+}
+.col-3 {
+  vertical-align: top;
+  display: inline-block;
+  width: 33.0%;
+}
+.side {
+  max-width: 30vw;
+}
+@media screen and (max-width:800px) {
+  .col-3 {
+    display: block;
+    width: 100%;
+  }
+}

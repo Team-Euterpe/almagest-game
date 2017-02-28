@@ -6,124 +6,8 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+    <link href="alma.css" rel="stylesheet">
     <title>Almagest Project</title>
-    <style>
-      @font-face {
-        font-family: 'Anonymous';
-        src:
-          url('fonts/anonymous_pro-webfont.woff2') format('woff2'),
-          url('fonts/anonymous_pro-webfont.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-      }
-      @font-face {
-        font-family: 'Quicksand';
-        src:
-          url('fonts/quicksand-regular-webfont.woff2') format('woff2'),
-          url('fonts/quicksand-regular-webfont.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-
-      }
-      html {
-        background-color: #3d3d3d;
-        color: #fff;
-      }
-      body {
-        margin:0;border:0;padding:0;
-        font-family: 'Lato', sans-serif;
-        font-weight: 300;
-      }
-      a, a:visited {
-        color: #ff4500;
-        text-decoration: none;
-      }
-      a:hover, a:active {
-        text-decoration: underline;
-      }
-      h1 {
-        font-family: 'Quicksand';
-      }
-      header h1 {
-        line-height: 160px;
-        margin: 0;
-        font-family: Anonymous, sans-serif;
-        font-size: 63px;
-      }
-      header {
-        height: 210px;
-        background-color: #fff;
-        color: #000;
-        text-align: center;
-        transition: .1s ease-out;
-        box-shadow: 0 15px 10px #333;
-      }
-      header.active {
-        background-color: #000;
-        color: #fff;
-      }
-      #hatctrl {
-        display: inline-block;
-        line-height: 40px;
-      }
-      #hatctrl a {
-        color: inherit;
-        border: 2px solid #777;
-        padding: .5em 1em;
-        text-decoration: none;
-        cursor: pointer;
-      }
-      #hatctrl #bpm {
-        float: right;
-        margin-left: 2em;
-      }
-      #hat {
-        display: none;
-      }
-      main {
-        width: 90%;
-        margin: 1em auto;
-      }
-      #catchphrase {
-        padding: 1em 0;
-        font-size: 28px;
-        font-style: italic;
-      }
-      main article {
-        color: #000;
-        background-color: #fff;
-        border-radius: 6px;
-        box-shadow: 0 10px 7px #333;
-        min-height: 100px;
-        margin: 1em 0;
-        padding: 1em;
-        text-align: center;
-      }
-      main article ul {
-        list-style: none;
-      }
-      main article#theteam div img {
-        max-width: 200px;
-        width: 100%;
-        border-radius: 50%;
-        box-shadow: 0 0 8px 2px #333;
-      }
-      footer {
-        color: white;
-        text-align: right;
-      }
-      .col-3 {
-        vertical-align: top;
-        display: inline-block;
-        width: 33.0%;
-      }
-      @media screen and (max-width:800px) {
-        .col-3 {
-          display: block;
-          width: 100%;
-        }
-      }
-    </style>
   </head>
   <body>
     <audio id="hat" preload="auto">
@@ -161,7 +45,6 @@
         <div class="col-3">
           <h1>Ressources</h1>
           <ul>
-            <li><a href="screens.html">Screenshots</a></li>
             <li><a href="tools.html">Tools used</a></li>
             <li><a href="assets.html">Assets used</a></li>
           </ul>
@@ -190,48 +73,6 @@
       </article>
       <footer>Copyright &copy; 2017 - <a href="https://twitter.com/Shookaite">Damien "SKiEL" Savatier</a></footer>
     </main>
-    <script>
-      var hat = document.getElementById("hat");
-      var header = document.getElementById("header");
-      var BPMdisp = document.getElementById("bpm");
-      var onoffdisp = document.getElementById("onoff");
-      var BPM = 110;
-      var on = false;
-      function play() {
-        hat.currentTime = 0;
-        hat.play();
-        header.className = (header.className == 'active') ? '' : 'active';
-      }
-      function up() {
-        if (BPM < 220)
-          BPM += 10;
-        refreshBPM();
-      }
-      function down() {
-        if (BPM > 40)
-          BPM -= 10;
-        refreshBPM();
-      }
-      function onoff() {
-        if (on) {
-          on = false;
-          onoffdisp.innerHTML = "Play";
-        } else {
-          on = true;
-          onoffdisp.innerHTML = "Pause";
-        }
-      }
-      function refreshBPM() {
-        BPMdisp.innerHTML = BPM + " BPM";
-      }
-      (function() {
-        refreshBPM();
-        (function loop(){
-          if (on)
-            play();
-          setTimeout(loop, (60 / BPM) * 1000);
-        })()
-      })()
-    </script>
+    <script src="alma.js"></script>
   </body>
 </html>
