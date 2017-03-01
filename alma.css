@@ -68,7 +68,7 @@ header.active {
   float: right;
   margin-left: 2em;
 }
-#hat {
+#hat, #clap {
   display: none;
 }
 main {
