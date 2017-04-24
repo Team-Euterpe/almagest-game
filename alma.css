@@ -122,6 +122,16 @@ footer {
 .side {
   max-width: 30vw;
 }
+#tools {
+  list-style: circle;
+  width: 200px;
+  margin: auto;
+  text-align: left;
+}
+#tools ul {
+  list-style: disc;
+}
+
 @media screen and (max-width:800px) {
   .col-3 {
     display: block;
