@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+    <link href="alma.css" rel="stylesheet">
+    <title>Almagest Project</title>
+  </head>
+  <body>
+    <audio id="hat" preload="auto">
+      <source src="assets/audio/x_hat.mp3" type="audio/mp3" />
+      <source src="assets/audio/x_hat.wav" type="audio/wav" />
+    </audio>
+    <audio id="clap" preload="auto">
+      <source src="assets/audio/clap.mp3" type="audio/mp3" />
+      <source src="assets/audio/clap.wav" type="audio/wav" />
+    </audio>
+    <header id="header">
+      <h1>Almagest</h1>
+      <div id="hatctrl">
+        <a onclick="down()">-</a>
+        <a id="onoff" onclick="onoff()">Play</a>
+        <a onclick="up()">+</a>
+        <span id="bpm"></span>
+      </div>
+    </header>
+    <main>
+      <div id="catchphrase">Feel the sound, be the music</div>
+      <article>
+        <ul>
+          <li>Unity<ul><li>Chronos</li></ul></li>
+          <li>Blender</li>
+          <li>FL Studio</li>
+        </ul>
+      </article>
+    </main>
+  </body>
+</html>
