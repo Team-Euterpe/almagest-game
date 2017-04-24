@@ -1,12 +1,22 @@
 var hat = document.getElementById("hat");
+var clap = document.getElementById("clap");
 var header = document.getElementById("header");
 var BPMdisp = document.getElementById("bpm");
 var onoffdisp = document.getElementById("onoff");
 var BPM = 110;
 var on = false;
+var beat = 3;
 function play() {
-  hat.currentTime = 0;
-  hat.play();
+  beat++;
+  if (beat > 3)
+    beat = 0;
+  if (beat == 3) {
+    clap.currentTime = 0;
+    clap.play();
+  } else {
+    hat.currentTime = 0;
+    hat.play();
+  }
   header.className = (header.className == 'active') ? '' : 'active';
 }
 function up() {
